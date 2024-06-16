@@ -35,26 +35,17 @@ class Account():
         else:
             raise ValueError("Balance is not a number")
     
-    def deposit(self):
-        deposit = input("How much do you want to deposit?: ")
-        if isinstance(deposit,float):
-            deposit = float(deposit)
-            if deposit > 0:
-                self._balance += deposit
+    def deposit(self,amount):
+        if isinstance(amount,float):
+            amount = float(amount)
+            if amount > 0:
+                self._balance += amount
                 return
         raise ValueError("Deposit must be a number greater than zero")
-    def withdraw(self):
-        withdraw = input("How much would you like to withdraw?: ")
-        if isinstance(withdraw,float):
-            withdraw = float(withdraw)
-            if withdraw > 0:
-                self._balance += -withdraw
+    def withdraw(self,amount):
+        if isinstance(amount,float):
+            amount = float(amount)
+            if amount > 0:
+                self._balance = self._balance-amount
                 return
         raise ValueError("Withdrawal must be a number greater than zero")
-    # THIS DOESNT BELONG HERE PUT IT IN BANK
-    """
-    def transfer(self):
-        transfer_id = input("Type the id of the account you want to transfer to: ")
-        if isinstance(transfer_id,int):
-            for account_id in 
-            """
