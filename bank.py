@@ -21,8 +21,18 @@ class Bank():
                 print("That id already exists")
                 return
         self._accounts.append(owner,id,0.00)
+
+    def del_account(self,id):
+        for i in self._accounts:
+            if self.check_id(id) == True:
+                del self._accounts[i]
+                return
+
+    def deposit(self,id,amount):
+        if self.check_id(id) == True:
+            Account.deposit(amount)
+
+    def withdraw(self,id,amount):
+        if self.check_id(id) == True:
+            Account.withdraw(amount)
     
-    def transfer(self,amount,id1,id2):
-        if self.check_id(id1) == True:
-            if self.check_id(id2) == True:
-                
