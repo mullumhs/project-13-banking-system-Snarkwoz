@@ -30,7 +30,7 @@ def withdraw(bank):
 def main():
     bank = Bank()
     while True:
-        choice = input("1 to create account, 2 to delete account, 3 to desposit, 4 to withdraw, 5 to exit: ")
+        choice = input("1 to create account \n2 to delete account\n3 to desposit\n4 to withdraw\n5 to exit\n")
         if choice == "1":
             add_account(bank)
         if choice == "2":
